@@ -20,7 +20,6 @@ public class Main {
         Bradesco.listAccounts(2);
         Santander.listAccounts();
 
-
         Joao.listAccounts();
     }
 }

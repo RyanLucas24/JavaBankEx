@@ -9,6 +9,17 @@ public class Bank {
         numberOfAccountsOfBank++;
     }
 
+    public void excludeAccountsOfBank(Account account){
+        for(int i = 0; i < numberOfAccountsOfBank; i++){
+            if(account == accountsOfBank[i]){
+                for (int j = i; j < numberOfAccountsOfBank - 1; j++)
+                    accountsOfBank[j] = accountsOfBank[j+1];
+                accountsOfBank[numberOfAccountsOfBank] = null;
+                numberOfAccountsOfBank--;
+            }
+        }
+    }
+
     public void listAccounts(){
         for(int i = 0; i < numberOfAccountsOfBank; i++) {
             System.out.println(accountsOfBank[i].showAccount());;

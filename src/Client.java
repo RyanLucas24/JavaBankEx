@@ -10,6 +10,17 @@ public class Client {
         numberOfAccountsOfClient++;
     }
 
+    public void excludeAccountsOfClient(Account account){
+        for (int i = 0; i < numberOfAccountsOfClient; i++) {
+            if(account == accountsOfClient[i]){
+                for (int j = i; j < numberOfAccountsOfClient - 1; j++)
+                    accountsOfClient[j] = accountsOfClient[j + 1];
+                accountsOfClient[numberOfAccountsOfClient] = null;
+                numberOfAccountsOfClient--;
+            }
+        }
+    }
+
     public void listAccounts() {
         for(int i = 0; i < numberOfAccountsOfClient; i++) {
             System.out.println(accountsOfClient[i].showAccount());
