@@ -12,7 +12,7 @@ public class Bank {
     public void excludeAccountsOfBank(Account account){
         for(int i = 0; i < numberOfAccountsOfBank; i++){
             if(account == accountsOfBank[i]){
-                for (int j = i; j < numberOfAccountsOfBank - 1; j++)
+                for (int j = i; j < numberOfAccountsOfBank; j++)
                     accountsOfBank[j] = accountsOfBank[j+1];
                 accountsOfBank[numberOfAccountsOfBank] = null;
                 numberOfAccountsOfBank--;

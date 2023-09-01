@@ -2,7 +2,7 @@ public class Client {
     private static final int MAX = 100;
     private final String name;
     private final String cpf;
-    private Account[] accountsOfClient = new Account[MAX];
+    private final Account[] accountsOfClient = new Account[MAX];
     private int numberOfAccountsOfClient;
 
     public void addToAccountsOfClient(Account account){
@@ -11,9 +11,9 @@ public class Client {
     }
 
     public void excludeAccountsOfClient(Account account){
-        for (int i = 0; i < numberOfAccountsOfClient; i++) {
+        for (int i = 0; i <= numberOfAccountsOfClient; i++) {
             if(account == accountsOfClient[i]){
-                for (int j = i; j < numberOfAccountsOfClient - 1; j++)
+                for (int j = i; j <= numberOfAccountsOfClient; j++)
                     accountsOfClient[j] = accountsOfClient[j + 1];
                 accountsOfClient[numberOfAccountsOfClient] = null;
                 numberOfAccountsOfClient--;

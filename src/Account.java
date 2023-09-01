@@ -14,6 +14,11 @@ public class Account {
         return String.format("Account: %d\n Agency: %d\n Client: %s\n",
                 number, agency, client.getName());
     }
+
+    public void excludeAccount(){
+        client.excludeAccountsOfClient(this);
+        bank.excludeAccountsOfBank(this);
+    }
     public boolean withdraw(double amount, int passwordOfAccount){
         if(passwordOfAccount == password && amount <= balance + availableCredit){
             balance -= amount;

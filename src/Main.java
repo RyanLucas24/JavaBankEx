@@ -1,3 +1,5 @@
+import jdk.jshell.SourceCodeAnalysis;
+
 public class Main {
     public static void main(String[] args) {
         Client Joao = new Client("Joao", "12345678901");
@@ -18,6 +20,13 @@ public class Main {
 
         Santander.listAccounts(1);
         Bradesco.listAccounts(2);
+
+        ThirdAccount.increaseLimit(200, 1234);
+        ThirdAccount.withdraw(100, 1234);
+        ThirdAccount.balance(1234);
+
+        SecondAccount.excludeAccount();
+
         Santander.listAccounts();
 
         Joao.listAccounts();
